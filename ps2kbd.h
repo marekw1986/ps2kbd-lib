@@ -29,6 +29,8 @@ int kbd_ready(void);
 // Returns  - single ASCII character
 char kbd_getc(void);
 
+void kbd_register_release_callback(void);
+
 #ifdef __cplusplus
 }
 #endif
