@@ -11,6 +11,8 @@
 extern "C" {
 #endif
 
+typedef void (*ps2_callback_t)(const char);
+
 // Initialize PS/2 keyboard support
 // Parameters
 //     pio  - keyboard suport pio number. 0 or 1
@@ -29,7 +31,7 @@ int kbd_ready(void);
 // Returns  - single ASCII character
 char kbd_getc(void);
 
-void kbd_register_release_callback(void);
+void kbd_register_release_callback(ps2_callback_t arg);
 
 #ifdef __cplusplus
 }
